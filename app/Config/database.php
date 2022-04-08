@@ -65,20 +65,6 @@
  * A key/value array of driver specific connection options.
  */
 class DATABASE_CONFIG {
-
-	public $default = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		// 'login' => 'admin_bicom',
-		// 'password' => 'Bicom@2022',
-		'login' => 'root',
-		'password' => 'root',
-		'database' => 'admin_bicom',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
-
 	public $test = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,

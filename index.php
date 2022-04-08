@@ -1,6 +1,4 @@
 <?php
-phpinfo();
-exit;
 /**
  * Requests collector.
  *
