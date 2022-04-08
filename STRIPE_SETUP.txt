@@ -1,0 +1,70 @@
+
+STRIPE SETUP
+================================================================================================================================
+
+If you also want to activate the Stripe payment gateway, you need to follow the steps below:
+
+
+1. In your Stripe account, create your products. This can be done at https://dashboard.stripe.com/products. 
+   These products will coincide with ONLY your MONTHLY subscription packages you create in the admin panel. Products are NOT needed for your 
+   add-on/1-time credit packages as they are only required for subscription(recurring) payments.
+
+   So if you create 5 monthly subscription credit packages in the script, you will need to create 5 products in your Stripe account. 
+   Just match up the name and amount fields.
+
+   IMPORTANT: After creating your product, you will see a "Pricing" section for that product. Copy the field value under the "API ID" column. It will start 
+   with "price_". This is the actual value you will need to copy/paste in the "Plan ID" field in the admin panel monthly packages of the script.
+
+
+2. If you create MONTHLY subscription packages in the admin, then you need to set a notification URL in Stripe. 
+   In Stripe, go to https://dashboard.stripe.com/account/webhooks
+
+   * Click on the "Add endpoint" button and enter "http://YOURSITEURL/users/getnotification" -- where YOURSITEURL is the exact location of where 
+     you have the script installed at.
+
+   * Click the "Select types to send" radio button and check the boxes for these 5 events:
+     
+     1.customer.subscription.created
+     2.customer.subscription.deleted
+     3.customer.subscription.updated
+     4.invoice.payment_succeeded
+     5.invoice.payment_failed
+
+   * Click the Add endpoint button.
+
+
+3. Whilst logged into your scripts administrative panel, click on 'Config', then click on 'Stripe Config', and 'Edit'. 
+   
+   * Enter your Stripe Live Secret Key and Live Publishable Key
+     (You API keys can be obtained by going to account settings at https://dashboard.stripe.com/account/apikeys)
+
+   * Save changes
+
+
+IMPORTANT: Stripe requires SSL be installed on your domain. Using Stripe, sensitive credit card information is sent directly 
+to Stripe, and does NOT touch your server. However, in order to protect yourself from certain forms of man-in-the-middle attacks, 
+you must serve the page containing the payment form over HTTPS as well. 
+
+Additionally, your customers are more comfortable sharing sensitive information on pages visibly served over HTTPS, which can help 
+increase your customer conversion rate.
+
+See here for more info: https://stripe.com/docs/security
+
+
+
+FORCE SSL Redirection
+====================================================================================================================================
+
+Once you have SSL installed on your server and you can access your site through https://, you may want to force the site to always
+use https:// and not http://. 
+
+1. Open your .htaccess file in the root folder of your install.
+2. Uncomment(remove the # sign) next to "RewriteCond %{HTTPS} off"
+3. Uncomment(remove the # sign) next to "RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]"
+4. Save changes
+
+
+
+
+
+

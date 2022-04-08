@@ -1,0 +1,206 @@
+@media (min-width: 992px){
+    .page-content-wrapper .page-content {
+	margin-left: 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-layout .navigation {
+	width: 60px;
+	padding-left: 8px;
+	padding-right: 8px;
+    }
+}
+
+.main-layout .main {
+    overflow: scroll !important;
+}
+
+
+.portlet.blue, .portlet.box.blue > .portlet-title, .portlet > .portlet-body.blue,
+.portlet.box.green > .portlet-title, .portlet.green, .portlet > .portlet-body.green {
+	background-color: #665dfe !important; /* Blue color; */
+}
+
+.navbar-light .nav-minimal .nav-link {
+    background: transparent;
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    color: #fff !important;
+    background-color: transparent !important;
+}
+
+.dashboard-stat.purple-plum .more,
+.dashboard-stat.blue-soft .more,
+.dashboard-stat.red-sunglo .more,
+.dashboard-stat.green-soft .more,
+.dashboard-stat.blue 
+{
+	background-color: #665dfe; /* blue color; */
+        opacity: 1;
+}
+
+.font-green,
+.font-blue,
+.font-purple,
+.font-yellow, 
+.font-blue-hoki,
+.font-red-sunglo, 
+.font-red {
+    color: #B7378D !important;
+}
+
+.btn.blue:not(.btn-outline) {
+	background-color: #B7378D;
+	border-color: #B7378D;
+}
+
+.bg-blue-hoki, .bg-hover-blue-hoki:hover,
+.bg-red-sunglo, .bg-red-sunglo:hover, 
+.bg-green-turquoise, .bg-green-turquoise:hover, 
+.bg-green-turquoise, .bg-green-turquoise:hover, 
+.bg-yellow-saffron, .bg-yellow-saffron:hover, 
+.bg-blue-madison, .bg-blue-madison:hover, 
+.bg-green, .bg-green:hover {
+	background: #EEF1F5 !important;
+}
+
+.tiles .tile .tile-body {
+	color: #B7378D;
+}
+
+.tiles .tile.selected, .tiles .tile:active {
+	border-color: #A1B1BC !important; /* dark gray */
+}
+
+.tiles .tile.selected .corner::after {
+	border-right: 40px solid #A1B1BC; /* dark gray */
+}
+
+.tiles .tile .tile-object > .name {
+	color: #000;
+}
+
+.dashboard-stat.purple-plum,
+.dashboard-stat.blue-soft,
+.dashboard-stat.red-sunglo,
+.dashboard-stat.green-soft {
+    background-color: #EEF1F5 !important; /* light gray */
+    
+}
+
+.dashboard-stat.purple-plum .details .desc,
+.dashboard-stat.purple-plum .details .number, 
+.dashboard-stat.blue-soft .details .desc,
+.dashboard-stat.blue-soft .details .number, 
+.dashboard-stat.red-sunglo .details .desc,
+.dashboard-stat.red-sunglo .details .number, 
+.dashboard-stat.green-soft .details .desc,
+.dashboard-stat.green-soft .details .number
+
+{
+	color: #B7378D;  /* purple */
+	
+}
+
+.btn.purple-plum:not(.btn-outline),
+.btn.purple-plum:not(.btn-outline):hover,
+.btn.yellow-casablanca:not(.btn-outline),
+.btn.yellow-casablanca:not(.btn-outline):hover,
+.btn.green:not(.btn-outline),
+.btn.green:not(.btn-outline):hover,
+.btn.red-thunderbird:not(.btn-outline),
+.btn.red-thunderbird:not(.btn-outline):hover,
+.btn.green-jungle:not(.btn-outline),
+.btn.green-jungle:not(.btn-outline):hover,
+.btn.blue-ebonyclay:not(.btn-outline),
+.btn.blue-ebonyclay:not(.btn-outline):hover,
+.btn.yellow-gold:not(.btn-outline),
+.btn.yellow-gold:not(.btn-outline):hover,
+.btn.purple-soft:not(.btn-outline),
+.btn.purple-soft:not(.btn-outline):hover {
+	color: #fff;
+	background-color: #B7378D;
+	border-color: #B7378D;
+}
+
+/* Side bar */
+.main-layout .main {
+	padding-left: 60px;
+}
+.main-layout .navigation {
+	position: fixed;
+	z-index: 9;
+	align-items: baseline;
+	transition-duration: .2s,.2s,.35s;
+  transition-timing-function: ease-out,ease-out,ease-out;
+}
+.main-layout ul.nav {	
+	width: 100%;
+	align-items: baseline;
+	justify-content: flex-start !important;
+}
+.main-layout ul.nav .nav-item {	
+	width: 100%;
+}
+.expand-toggle-btn {
+	padding: 10px 15px;
+}
+.main-layout .navigation.expand {
+	width: 270px;
+}
+
+.main-layout .navigation:hover {
+	width: 270px;
+}
+
+.navigation.navbar .nav-link .nav-name {
+	opacity: 0;
+	transition-duration: .2s,.2s,.35s;
+  transition-timing-function: ease-out,ease-out,ease-out;
+}
+
+.navigation.navbar.expand .nav-link .nav-name {
+	opacity: 1;	
+}
+
+.navigation.navbar:hover .nav-link .nav-name {
+	opacity: 1;	
+}
+
+.navigation.navbar .nav-link {
+	position: relative;
+	text-align: left;
+}
+.navigation.navbar .nav-link .nav-name {
+	position: absolute;
+	left: 40px;
+	width: max-content;
+}
+
+.caret {
+	position: absolute;
+	left: 220px;
+	top: 15px;
+	cursor: pointer;
+}
+
+.caret-reversed{
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.nav-item .sub-menu {
+	list-style: none;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height .1s ease-out;
+}
+
+.sub-menu.expand {
+	opacity: 1;
+	max-height: 400px;
+	
+}
